@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Navbar, NavbarBrand } from 'reactstrap';
 import './App.css';
-import Menu from './Components/Menu';
+import Menu from './Components/MenuComponent';
 import {DISHES} from './shared/dishes';
 import { Component } from 'react';
 
