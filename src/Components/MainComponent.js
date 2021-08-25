@@ -6,6 +6,7 @@ import Home from './HomeComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Contact from './ContactComponent';
 import DishDetail from './DishedDetails';
+import About from './AboutComponent';
 
 import { COMMENTS } from '../shared/comments'
 import { DISHES } from '../shared/dishes'
@@ -43,7 +44,13 @@ class Main extends Component {
       );
   };
 
-
+  const AboutUsPage = () => {
+    return(
+        <About 
+            leaders={this.state.leaders}
+        />
+    );
+};
 
 
   const DishWithId = ({match}) => {
@@ -62,7 +69,7 @@ class Main extends Component {
               <Route path='/home' component={HomePage} />
               <Route exact path='/menu' component={() => <Menu dishes={this.state.dishes} />} />
               <Route path='/menu/:dishId' component={DishWithId} />
-
+              <Route exact path="/aboutus" component={ AboutUsPage } />
                     <Route exact path="/contactus" component={Contact } />
                     
               <Redirect to="/home" />
